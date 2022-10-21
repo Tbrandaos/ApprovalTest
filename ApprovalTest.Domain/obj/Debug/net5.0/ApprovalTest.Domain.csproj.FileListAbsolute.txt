@@ -1,0 +1,12 @@
+C:\Users\Thiago Brandão\source\repos\ApprovalTest\ApprovalTest.Domain\bin\Debug\net5.0\ApprovalTest.Domain.deps.json
+C:\Users\Thiago Brandão\source\repos\ApprovalTest\ApprovalTest.Domain\bin\Debug\net5.0\ApprovalTest.Domain.dll
+C:\Users\Thiago Brandão\source\repos\ApprovalTest\ApprovalTest.Domain\bin\Debug\net5.0\ApprovalTest.Domain.pdb
+C:\Users\Thiago Brandão\source\repos\ApprovalTest\ApprovalTest.Domain\obj\Debug\net5.0\ApprovalTest.Domain.csproj.AssemblyReference.cache
+C:\Users\Thiago Brandão\source\repos\ApprovalTest\ApprovalTest.Domain\obj\Debug\net5.0\ApprovalTest.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thiago Brandão\source\repos\ApprovalTest\ApprovalTest.Domain\obj\Debug\net5.0\ApprovalTest.Domain.AssemblyInfoInputs.cache
+C:\Users\Thiago Brandão\source\repos\ApprovalTest\ApprovalTest.Domain\obj\Debug\net5.0\ApprovalTest.Domain.AssemblyInfo.cs
+C:\Users\Thiago Brandão\source\repos\ApprovalTest\ApprovalTest.Domain\obj\Debug\net5.0\ApprovalTest.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Thiago Brandão\source\repos\ApprovalTest\ApprovalTest.Domain\obj\Debug\net5.0\ApprovalTest.Domain.dll
+C:\Users\Thiago Brandão\source\repos\ApprovalTest\ApprovalTest.Domain\obj\Debug\net5.0\refint\ApprovalTest.Domain.dll
+C:\Users\Thiago Brandão\source\repos\ApprovalTest\ApprovalTest.Domain\obj\Debug\net5.0\ApprovalTest.Domain.pdb
+C:\Users\Thiago Brandão\source\repos\ApprovalTest\ApprovalTest.Domain\obj\Debug\net5.0\ref\ApprovalTest.Domain.dll
