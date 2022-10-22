@@ -49,7 +49,7 @@ namespace ApprovalTest.Test
         }
 
         [Fact]
-        public async void BasicEverythingRequestWorks()
+        public async void BasicEverythingRequest_Works()
         {
             var everythingRequest = new EverythingRequest
             {
@@ -62,7 +62,7 @@ namespace ApprovalTest.Test
         }
 
         [Fact]
-        public async void ComplexEverythingRequestWorks()
+        public async void ComplexEverythingRequest_Works()
         {
             var everythingRequest = new EverythingRequest
             {
@@ -77,7 +77,7 @@ namespace ApprovalTest.Test
         }
 
         [Fact]
-        public async void BadEverythingRequestReturnsError()
+        public async void BadEverythingRequest_ReturnsError()
         {
             var everythingRequest = new EverythingRequest
             {
@@ -95,13 +95,14 @@ namespace ApprovalTest.Test
 
             _service = new NewsService(_mapper, _config);
 
-            var result = await _service.Invoking(a => _service.GetEverything(everythingRequest))
-            .Should()
-            .ThrowExactlyAsync<Exception>();
+
+            var result = await Record.ExceptionAsync(() => _service.GetEverything(everythingRequest));
+
+            Assert.AreEqual("ApiKeyInvalid : Your API key is invalid or incorrect. Check your key, or go to https://newsapi.org to create a free API key.", result.Message);
         }
 
         [Fact]
-        public async void BasicTopHeadlinesRequestWorks()
+        public async void BasicTopHeadlinesRequest_Works()
         {
             var topHeadlinesRequest = new TopHeadlinesRequest();
 
@@ -113,7 +114,7 @@ namespace ApprovalTest.Test
         }
 
         [Fact]
-        public async void BadTopHeadlinesRequestReturnsError()
+        public async void BadTopHeadlinesRequest_ReturnsError()
         {
             var topHeadlinesRequest = new TopHeadlinesRequest();
 
@@ -130,13 +131,13 @@ namespace ApprovalTest.Test
 
             _service = new NewsService(_mapper, _config);
 
-            var result = await _service.Invoking(a => _service.GetTopHeadlines(topHeadlinesRequest))
-            .Should()
-            .ThrowExactlyAsync<Exception>();
+            var result = await Record.ExceptionAsync(() => _service.GetTopHeadlines(topHeadlinesRequest));
+
+            Assert.AreEqual("ApiKeyInvalid : Your API key is invalid or incorrect. Check your key, or go to https://newsapi.org to create a free API key.", result.Message);
         }
 
         [Fact]
-        public async void BadTopHeadlinesRequestReturnsError2()
+        public async void BadTopHeadlinesRequest_ReturnsError2()
         {
             var topHeadlinesRequest = new TopHeadlinesRequest();
 
@@ -144,9 +145,9 @@ namespace ApprovalTest.Test
             topHeadlinesRequest.Country = Countries.AU;
             topHeadlinesRequest.Language = Languages.EN;
 
-            var result = await _service.Invoking(a => _service.GetTopHeadlines(topHeadlinesRequest))
-            .Should()
-            .ThrowExactlyAsync<Exception>();
+            var result = await Record.ExceptionAsync(() => _service.GetTopHeadlines(topHeadlinesRequest));
+
+            Assert.AreEqual("ParametersIncompatible : You cannot mix the sources parameter with the country or category parameters.", result.Message);
         }
     }
 }
