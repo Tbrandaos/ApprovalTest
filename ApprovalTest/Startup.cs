@@ -64,6 +64,7 @@ namespace ApprovalTest
             {
                 endpoints.MapControllers();
             });
+            app.UsePathBase("/swagger");
         }
     }
 }
